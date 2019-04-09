@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JenniferCms</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application'  %>
+    <%= yield :javascript %>
+    <!-- <%= javascript_pack_tag 'application' %> -->
+    <%= yield :theme_css %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= yield :theme_javascript %>
+  </body>
+</html>

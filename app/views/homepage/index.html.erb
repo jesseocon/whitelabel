@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <p>User: <%= current_user.email %></p>
+  <%= link_to('Logouts', destroy_user_session_path) %>
+<% else %>
+  <%= link_to 'Sign in',  new_user_session_path %>
+  <%= link_to 'Sign up', new_user_registration_path %>
+<% end%>
+
+<h1>This is the marketing homepage</h1>

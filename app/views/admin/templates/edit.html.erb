@@ -1,0 +1,11 @@
+<% content_for :javascript do %>
+    <%= javascript_pack_tag 'admin/templates/index' %>
+<% end %>
+<h1 id="template-edit">Template Edit Page</h1>
+<%= form_for(@template, url: admin_theme_template_path(@theme, @template.id), method: :put) do |f| %>
+  <%= f.text_area :template_string, id: 'main-editor' %>
+  <%= f.hidden_field :id %>
+  <%= f.hidden_field :kind %>
+  <%= f.hidden_field :template_string, name: "template_obj[template]", id: 'template_obj_template' %>
+  <%= f.submit 'Save' %>
+<% end%>

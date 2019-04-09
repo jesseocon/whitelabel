@@ -1,0 +1,8 @@
+<h1>New Template Page</h1>
+<%= form_for(@template, url: admin_theme_templates_path(@theme.id), method: :post) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :template_string, id: 'main-editor' %>
+  <%= f.hidden_field :kind %>
+  <%= f.hidden_field :template_string, name: "template_obj[template]", id: 'template_obj_template' %>
+  <%= f.submit 'Save' %>
+<% end %>

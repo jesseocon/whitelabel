@@ -1,0 +1,19 @@
+<% content_for :theme_css do %>
+  <style>
+    <% @theme.stylesheets.each do |sheet|%>
+      <%= sheet.template.html_safe %>
+    <% end %>
+  </style>
+<% end%>
+
+<% @theme.templates.each do |template| %>
+  <%= template.template.html_safe %>
+<% end%>
+
+<% content_for :theme_javascript do %>
+  <script>
+    <% @theme.javascripts.each do |script| %>
+      <%= script.template.html_safe %>
+    <% end %>
+  </script>
+<% end %>
